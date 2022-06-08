@@ -1,0 +1,15 @@
+FROM python:3.8.0-buster
+
+LABEL org.opencontainers.image.title="Flask"\
+	  org.opencontainers.image.description= "Testing docker with Flask"
+	  
+#Make a director for apption 
+WORKDIR /app
+
+#install dependencies
+copy requirements.txt
+pip install -r requirements.txt
+
+#
+Copy /app . 
+cmd ["python", "main.py"]
