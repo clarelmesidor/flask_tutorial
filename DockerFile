@@ -7,6 +7,6 @@ Add main.py .
 #Info: Copy requirements, needs two args file and destination
 copy requirements.txt .
 #Info: Install dependencies
-pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 cmd ["python", "./main.py"]
