@@ -4,8 +4,9 @@ LABEL org.opencontainers.image.title="Flask"
 
 Add main.py .
 
-#install dependencies
-copy requirements.txt
+#Info: Copy requirements, needs two args file and destination
+copy requirements.txt .
+#Info: Install dependencies
 pip install -r requirements.txt
 
 cmd ["python", "./main.py"]
